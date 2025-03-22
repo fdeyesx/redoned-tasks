@@ -6,7 +6,7 @@ def f(n):
         s = '11' + s[2:] + '1'
     return int(s,2)
 a = []
-for i in (27,100):
+for i in range(28,100):
     r = f(i)
     a.append(r)
 print(min(a))
