@@ -17,7 +17,7 @@ def f(n):
     return int(s,3)
 
 a = []
-for q in range(0,1000):
+for q in range(0,100000):
     r = f(q)
     if r > 353:
         a.append(r)
