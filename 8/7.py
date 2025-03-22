@@ -1,12 +1,14 @@
 from itertools import product, repeat
-k = 0
-for i in product('берск',repeat=5):
+r = 0
+for i in product('01234567',repeat=5):
     s = ''.join(i)
-    k+=1
-for i in product('берск',repeat=6):
-    s = ''.join(i)
-    k+=1
-for i in product('берск',repeat=7):
-    s = ''.join(i)
-    k+=1
-print(k)
+    if s[0] != '0':
+        if s.count('1') == 0:
+            if len(set(s)) == len(s):
+                for j in '0246':
+                    s = s.replace(j,'+')
+                for k in '1357':
+                    s = s.replace(k, '-')
+                if '++' not in s and '--' not in s:
+                    r+=1
+print(r)
