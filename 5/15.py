@@ -2,7 +2,7 @@ def f(n):
     s = str(bin(n))[2:]
     n1 = 0
     while n1 < 2:
-        if s.count('1')%2 == 0:
+        if len(list(s))%2 == 0:
             s = s + '10'
         else:
             s = '11' + s
