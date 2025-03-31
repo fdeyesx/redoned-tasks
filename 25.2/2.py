@@ -9,5 +9,6 @@ for x in range(770_000,0,-1):
         sum1 = 0
         for j in d:
             sum1 += int(j)
+        sum1//=len(d)
         if sum1%100 == 12:
             print(x,sum1)
