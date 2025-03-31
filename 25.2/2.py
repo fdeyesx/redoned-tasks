@@ -6,9 +6,6 @@ for x in range(770_000,0,-1):
             d.append(x//i)
     if len(d) != 0:
         d = sorted(d)
-        sum1 = 0
-        for j in d:
-            sum1 += int(j)
-        sum1//=len(d)
+        sum1 = sum(d)//len(d)
         if sum1%100 == 12:
             print(x,sum1)
