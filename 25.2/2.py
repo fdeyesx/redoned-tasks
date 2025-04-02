@@ -1,9 +1,9 @@
 for x in range(770_000,0,-1):
-    d = []
+    d = set()
     for i in range(2, int(x**0.5) + 1):
         if x % i == 0:
-            d.append(i)
-            d.append(x//i)
+            d.add(i)
+            d.add(x//i)
     if len(d) != 0:
         d = sorted(d)
         sum1 = sum(d)//len(d)
